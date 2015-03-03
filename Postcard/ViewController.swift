@@ -34,10 +34,11 @@ class ViewController: UIViewController {
         messageLabel.text = enterMessageTextField.text
         messageLabel.textColor = UIColor.redColor()
         
-//        messageLabel.text = "I just sent " + enterMessageTextField.text
+        // messageLabel.text = "I just sent " + enterMessageTextField.text
         enterMessageTextField.text = ""
         enterMessageTextField.resignFirstResponder()
         
+        // Adding a comment here to test commit
         mailButton.setTitle("Mail has been sent", forState: UIControlState.Normal)
     }
 
