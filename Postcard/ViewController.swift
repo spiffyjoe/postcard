@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var nameLabel: UILabel!
+    
     @IBOutlet weak var messageLabel: UILabel!
     
     @IBOutlet weak var enterNameTextField: UITextField!
@@ -34,10 +36,18 @@ class ViewController: UIViewController {
         messageLabel.text = enterMessageTextField.text
         messageLabel.textColor = UIColor.redColor()
         
+        nameLabel.hidden = false
+        nameLabel.text = enterNameTextField.text
+        nameLabel.textColor = UIColor.blueColor()
+        
         // messageLabel.text = "I just sent " + enterMessageTextField.text
         enterMessageTextField.text = ""
         enterMessageTextField.resignFirstResponder()
+
         
+        enterNameTextField.text = ""
+        enterNameTextField.resignFirstResponder()
+
         // Adding a comment here to test commit
         mailButton.setTitle("Mail has been sent", forState: UIControlState.Normal)
     }
